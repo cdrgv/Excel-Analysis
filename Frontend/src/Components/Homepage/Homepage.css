@@ -1,0 +1,434 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.homepage {
+  background-color: #fff;
+  width: 100%;
+}
+
+/* Navbar */
+.homepage-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.homepage-logo {
+  height: 80px;
+}
+
+.homepage-nav {
+  background-color: #002aff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.homepage-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.homepage-nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.homepage-nav-list li a:hover {
+  background-color: #fff;
+  color: #002aff;
+}
+
+.homepage-login {
+  background-color: #3b3be9;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.homepage-login:hover {
+  background-color: #ffffff;
+  color: #3b3be9;
+  box-shadow: 0 0 8px rgba(0, 42, 255, 0.3);
+}
+
+/* Hero Section */
+.homepage-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.homepage-text {
+  flex: 1 1 400px;
+  padding: 20px;
+  position: relative;
+}
+
+.homepage-welcome {
+  font-size: 48px;
+  color: #333;
+  position: relative;
+  height: 60px;
+}
+
+.homepage-welcome::after {
+  position: absolute;
+  content: "W";
+  left: 0;
+  top: 0;
+  animation: homepage-animateText 6s linear 1s infinite;
+}
+
+@keyframes homepage-animateText {
+  0% {
+    content: "W";
+  }
+
+  4% {
+    content: "We";
+  }
+
+  8% {
+    content: "Wel";
+  }
+
+  12% {
+    content: "Welc";
+  }
+
+  16% {
+    content: "Welco";
+  }
+
+  20% {
+    content: "Welcom";
+  }
+
+  24% {
+    content: "Welcome";
+  }
+
+  30% {
+    content: "Welcome.";
+  }
+
+  34% {
+    content: "Welcome..";
+  }
+
+  38% {
+    content: "Welcome...";
+  }
+
+  42% {
+    content: "Welcome...";
+  }
+
+  100% {
+    content: "W";
+  }
+}
+
+.homepage-description {
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.homepage-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* How-To Section */
+.homepage-howto {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.homepage-howto-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.homepage-howto-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.homepage-howto-step {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.homepage-step-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3d32d8;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.homepage-step-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.homepage-step-text {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* About Section */
+.homepage-about {
+  padding: 80px 40px;
+  background-color: #f8fafc;
+  display: flex;
+  justify-content: center;
+}
+
+.homepage-about-content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.homepage-about-title {
+  font-size: 36px;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.homepage-about-text {
+  font-size: 18px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.homepage-about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.stat-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+  font-size: 28px;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Footer Styles */
+.homepage-footer {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 60px 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  height: 60px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 20px;
+}
+
+.footer-desc {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #3b82f6;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.social-icons span:hover {
+  background: #3b82f6;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-navbar {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .homepage-logo {
+    height: 40px;
+  }
+
+  .homepage-nav {
+    padding: 4px 8px;
+  }
+
+  .homepage-nav-list {
+    gap: 10px;
+  }
+
+  .homepage-nav-list li a {
+    padding: 3px;
+  }
+
+  .homepage-nav ul li a {
+    font-size: 10px;
+  }
+
+  .homepage-login {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .homepage-hero {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+  }
+
+  .homepage-image {
+    flex: 1 1;
+    margin-top: 20px;
+    max-width: 250px;
+  }
+
+  .homepage-text {
+    flex: 1 1;
+  }
+
+  .homepage-howto {
+    padding: 10px;
+  }
+
+  .homepage-howto-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-welcome,
+  .homepage-description {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .homepage-howto-step {
+    flex: 1 1;
+  }
+}

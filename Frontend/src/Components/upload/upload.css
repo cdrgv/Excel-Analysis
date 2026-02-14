@@ -1,0 +1,55 @@
+/* Container Layout */
+.history-dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f6f9;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.history-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+/* Header */
+.history-body {
+  padding: 2rem;
+}
+
+.history-title {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+/* Upload List */
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.history-item:hover {
+  background-color: #f0f0f0;
+}
+
+.history-item p {
+  margin: 0.3rem 0;
+  color: #444;
+}
+
+.no-history {
+  font-size: 1rem;
+  color: #777;
+}
