@@ -11,43 +11,62 @@ import aiRoutes from "./routes/aiRoutes.js";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// ✅ Middleware
+/* ===========================
+   ✅ MIDDLEWARE
+=========================== */
+
+// Parse JSON
 app.use(express.json());
+
+// Parse Cookies
 app.use(cookieParser());
 
-// ✅ CORS — IMPORTANT (Vite runs on 5173, Vercel for production)
-// ✅ CORS — IMPORTANT (Vite runs on 5173, Vercel for production)
+// CORS Configuration (Allow All Origins + Credentials)
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://excel-analysis-platform-2.vercel.app"
-    ],
+    origin: true,   // dynamically allow all origins
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
-// ✅ Handle preflight explicitly (THIS FIXES YOUR ERROR)
-app.options("*", cors());
+/* ===========================
+   ✅ TEST ROUTE
+=========================== */
 
-// ✅ Test route
 app.get("/api/test", (req, res) => {
-  res.json({ message: "Backend working" });
+  res.json({ message: "Backend working 🚀" });
 });
 
-// ✅ Routes
+/* ===========================
+   ✅ ROUTES
+=========================== */
+
 app.use("/api/auth", authRoutes);
 app.use("/api/files", uploadRoute);
 app.use("/api", aiRoutes);
 
-// ✅ DB + Server
+/* ===========================
+   ✅ 404 HANDLER
+=========================== */
+
+app.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
+});
+
+/* ===========================
+   ✅ DATABASE + SERVER
+=========================== */
+
 connect(process.env.MONGO_URI)
   .then(() => {
-    console.log("MongoDB connected");
-    app.listen(PORT, () =>
-      console.log(`Server running on port ${PORT}`)
-    );
+    console.log("MongoDB connected ✅");
+
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT} 🚀`);
+    });
   })
-  .catch((err) => console.error(err));
+  .catch((err) => {
+    console.error("MongoDB connection error ❌:", err);
+  });
